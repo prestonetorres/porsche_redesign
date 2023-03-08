@@ -1,0 +1,618 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+======================================== */
+
+
+/* 1. Global Styles
+======================================== */
+
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFF;
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+a:hover {
+    color: #F51A23;
+}  
+
+button {
+    height: 2.875rem;
+    width: 16.125rem;
+    background-color: #FFF;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-size: 16px;
+    padding: auto 0;
+    border: 0;
+    border-radius: .125rem;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: #F51A23;
+    color: #FFF;
+}
+
+
+/* 2. Typography Styles
+======================================== */
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vvtSM1J-gEPT5Ese09hHSh0me8iUI0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vvtSM1J-gEPT5Ese09hHSh0me8iUI0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vvtSM1J-gEPT5Ese09hHSh0me8iUI0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vvtSM1J-gEPT5Ese09hHSh0me8iUI0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* 3. Structure Styles
+======================================== */
+
+
+
+/* 4. Module Styles
+======================================== */
+
+/* Site Navigation */
+
+.site-header {
+    height: 9.375rem;
+    width: auto;
+    background-color: #000;
+    border-bottom: .125rem solid #F51A23;
+    display: flex;
+    z-index: 100;
+}
+
+.site-header-logo {
+    width: 6.25rem;
+    height: auto;
+    margin-left: 4.375rem;
+    margin-top: 1.5625rem;
+}
+
+.site-header-nav {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    z-index: 90;
+}
+
+
+.site-header-nav-left {
+    margin-left: 5.125rem;
+    display: flex;
+    justify-items: center;
+}
+
+.site-header-nav-left a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.site-header-nav-left a:hover {
+    display: inline-block;
+    position: relative;
+    color: #F51A23;
+}
+
+.site-header-nav-left a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F51A23;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+.site-header-nav-left a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.site-header-nav-left img {
+    position: relative;
+    padding-left: .125rem;
+}
+
+.site-header-nav-right {
+    margin-left: auto;
+    margin-right: 8.375rem;
+    display: inline-flex;
+    align-content: center;
+}
+
+.site-header-nav-right a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.site-header-nav-right a:hover {
+    position: relative;
+    color: #F51A23;
+}
+
+.site-header-nav-right a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F51A23;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.site-header-nav-right a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.site-header-nav-right ul {
+    display: inline-flex;
+    align-content: center;
+    list-style: none;
+}
+
+.site-header-nav-right li {
+    padding-left: 1.25rem;
+}
+
+
+/* Site Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 28.3125rem;
+    width: 100%;
+    background-color: #000;
+    justify-content: center;
+    padding-left: 8.375rem;
+}
+
+.footer-top {
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 2.25rem;
+}
+
+.footer-middle {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.footer-bottom {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.current-region {
+    display: inline-flex;
+    flex-direction: row;
+    padding-top: .75rem;
+}
+
+.current-region a {
+    color: #FFF;
+    padding-left: .75rem;
+}
+
+.current-region a:hover {
+    color: #F51A23;
+}
+
+.newsletter {
+    padding-right: 5.8125rem;
+    padding-bottom: 2.4375rem;
+}
+
+.newsletter p {
+    padding: .75rem 0 1.625rem 0;
+}
+
+.contact {
+    padding-right: 5.8125rem;
+    padding-bottom: 2.4375rem;
+}
+
+.contact p {
+    padding: .75rem 0 1.625rem 0;
+}
+
+.social-media {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.social-media p {
+    padding: .75rem 0 1.625rem 0;
+}
+
+.social-media-links {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-media-links button {
+    width: 2.875rem;
+}
+
+.company {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.company-links {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.company-links-middle {
+    width: 16.5625rem;
+    padding: 0 5.25rem 0 10.9375rem;
+}
+
+.company-links ul {
+    list-style: none;
+}
+
+.company-links li {
+    padding: .75rem 0;   
+}
+
+.company-links a {
+    color: #FFF;
+    text-decoration: none;
+
+}
+
+.company-links a:hover {
+    position: relative;
+    color: #F51A23;
+}
+
+.company-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F51A23;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.company-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* 5. Component Styles
+======================================== */
+.main-background {
+    background-color: #000;
+}
+.main-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5.75rem;
+    margin-top: 35.8125rem;
+}
+
+.main-container h1 {
+    display: inline-flex;
+    padding-right: 1rem;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.main-container a:hover {
+    position: relative;
+    color: #F51A23;
+}
+
+.main-container a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F51A23;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.main-container a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.main-container img {
+    padding-right: 1.25rem;
+}
+
+.main-container-description {
+    margin-left: 14.75rem;
+}
+
+
+
+.main-hero-background-img {
+    margin-top: auto;
+    background-image: url(./Images/main-dakar-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 45.25rem;
+    z-index: 1;
+}
+
+.site-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22.5rem;
+    width: 100%;
+    background-color: #000;
+    clear: both;
+    
+}
+
+.site-features ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.site-feature-background-1 {
+    background-image: url(./Images/Experience.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22.56rem;
+    height: 17.5rem;
+
+}
+
+.site-feature-background-2 {
+    background-image: url(./Images/Rennsport.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22.56rem;
+    height: 17.5rem;
+}
+
+.site-feature-background-3 {
+    background-image: url(./Images/Dreams.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22.56rem;
+    height: 17.5rem;
+}
+
+.site-features a {
+    display: flex;
+    flex-direction: column-reverse;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: inset 0px -1rem 4rem rgba(0,0,0,0.9);
+}
+
+.site-features a:hover {
+    color: #F51A23;
+}
+
+.models-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    height: 59.5rem;
+    width: 100%;
+    margin: 0;
+}
+
+.models-section-header {
+    margin-left: 8.375rem;
+    margin-bottom: 1.25rem;
+}
+
+/* .models-section h1 {
+    width: 100%;
+    margin-left: 8.375rem;
+    margin-bottom: 1.25rem;
+} */
+
+.models-section a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFF;
+    padding-left: 4.375rem;
+}
+
+.models-section a:hover {
+    color: #F51A23;
+}
+
+.models-section-left {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-left: 0;
+}
+
+.models-section-left ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.models-section-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.models-section-right ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+.models-911 {
+    background-image: url(./Images/911.webp);
+    background-size: 55rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
+
+.models-718 {
+    background-image: url(./Images/718.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -7rem;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
+
+.models-Macan {
+    background-image: url(./Images/Macan.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -2rem;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
+
+.models-Taycan {
+    background-image: url(./Images/Taycan.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -2rem;
+    overflow: hidden;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
+
+.models-Panamera {
+    background-image: url(./Images/Panamera.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -2rem;
+    overflow: hidden;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
+
+.models-Cayenne {
+    background-image: url(./Images/Cayenne.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -2rem;
+    overflow: hidden;
+    width: 42.1875rem;
+    height: 17.625rem;
+}
